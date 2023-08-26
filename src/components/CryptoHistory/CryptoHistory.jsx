@@ -5,7 +5,7 @@ export const CryptoHistory = ({ items }) => {
     <BaseTable>
   <THead>
     <tr>
-      <Th>№</Th>
+      {/* <Th>№</Th> */}
       <Th>PRICE</Th>
       <Th>AMOUNT</Th>
       <Th>DATE</Th>
@@ -15,7 +15,7 @@ export const CryptoHistory = ({ items }) => {
       <tbody>
         {items.map(({ id, price, amount, date }) => (
 <Tr key={id}>
-            <Td>1</Td>
+            {/* <Td>1</Td> */}
             <Td>{price}</Td>
             <Td>{amount}</Td>
             <Td>{date}</Td>
