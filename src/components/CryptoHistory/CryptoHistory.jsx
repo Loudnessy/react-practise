@@ -1,11 +1,12 @@
 import { BaseTable, THead, Th, Tr, Td } from './CryptoHistory.styled';
+import { history } from '../../service/service';
 
 export const CryptoHistory = ({ items }) => {
   return (
     <BaseTable>
   <THead>
     <tr>
-      {/* <Th>№</Th> */}
+      <Th>№</Th>
       <Th>PRICE</Th>
       <Th>AMOUNT</Th>
       <Th>DATE</Th>
@@ -15,10 +16,10 @@ export const CryptoHistory = ({ items }) => {
       <tbody>
         {items.map(({ id, price, amount, date }) => (
 <Tr key={id}>
-            {/* <Td>1</Td> */}
+            <Td>{id}</Td>
             <Td>{price}</Td>
             <Td>{amount}</Td>
-            <Td>{date}</Td>
+            <Td>{history(date)}</Td>
     </Tr>
         ))}
   </tbody>
