@@ -1,10 +1,10 @@
-import { formatDistanceToNow, formatRelative, subDays } from 'date-fns'
+import { formatDistanceToNow, format } from 'date-fns'
 
 
 export const formatter = data => {
     return formatDistanceToNow(new Date(data), { addSuffix: true })
 }
 
-export const history = date => {
-    return formatRelative(subDays(new Date(date), 0), new Date())
+export const formatTable = date => {
+    return format(new Date(date), 'Pp');
 }
